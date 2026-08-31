@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Video Editor & Motion Designer</title>
+  <meta name="description" content="Video editor and motion designer. I cut raw footage into stories that keep people watching — commercials, YouTube series, documentaries and social content." />
+
+  <!-- Favicon: a simple clapperboard-style icon, no image file needed -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23121110%22/><rect x=%2218%22 y=%2238%22 width=%2264%22 height=%2244%22 rx=%226%22 fill=%22%23E0A73F%22/><rect x=%2218%22 y=%2220%22 width=%2264%22 height=%2216%22 rx=%224%22 fill=%22%23F3F1EC%22 transform=%22rotate(-6 50 28)%22/></svg>" />
+
+  <!-- Fonts: Space Grotesk for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Scroll progress bar styled like a video scrubber. Filled in by js/main.js -->
+  <div class="scrub-track" aria-hidden="true">
+    <div class="scrub-fill" id="scrubFill"></div>
+    <div class="scrub-playhead" id="scrubPlayhead"></div>
+  </div>
+
+  <!-- Floating timecode readout, updates as you scroll. Purely decorative / for fun. -->
+  <div class="timecode-badge" id="timecodeBadge" aria-hidden="true">00:00 / 03:00</div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-row">
+      <a href="#top" class="logo">Your Name<span class="logo-dot">.</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#work" data-nav>Work</a>
+        <a href="#services" data-nav>Services</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-small btn-primary nav-cta">Start a project</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav panel -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#work" data-nav>Work</a>
+      <a href="#services" data-nav>Services</a>
+      <a href="#about" data-nav>About</a>
+      <a href="#contact" data-nav>Contact</a>
+      <a href="#contact" class="btn btn-primary">Start a project</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Currently taking on new projects
+          </div>
+
+          <h1 class="hero-title">
+            I cut raw footage into stories worth watching.
+          </h1>
+
+          <p class="hero-sub">
+             I help creators, entrepreneurs, and agencies turn content into stand-out storytelling with crisp cuts, bold pacing, and polished visual direction.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">Watch my reel</a>
+            <a href="#contact" class="btn btn-ghost">Start a project</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-7.4 7-13a7 7 0 1 0-14 0c0 5.6 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Based in Your City
+            </div>
+            <div class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+              5 years behind the timeline
+            </div>
+          </div>
+
+          <div class="hero-socials">
+            <!-- Replace # with your real profile URLs -->
+            <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+            </a>
+            <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="https://x.com/finxprop/?utm_source=chatgpt.com" target="_blank" rel="noopener" aria-label="X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.207-6.807-5.974 6.807H2.882l7.432-8.49H1.077l5.313-6.01h6.854zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" style="--delay:120ms">
+          <div class="frame-graphic">
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+            <div class="waveform" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="frame-tag rec"><span class="rec-dot"></span>REC</div>
+            <div class="frame-tag time">00:00:12:04</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="stats-section reveal">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-number" data-count="5" data-suffix="+">0</span>
+          <span class="stat-label">Years editing</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="180" data-suffix="+">0</span>
+          <span class="stat-label">Projects delivered</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="2400" data-suffix="+">0</span>
+          <span class="stat-label">Hours of footage cut</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="40" data-suffix="M+">0</span>
+          <span class="stat-label">Views generated</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">00:01</span>
+          <h2 class="section-title">What I do</h2>
+          <p class="section-sub">Four things I focus on so your video looks and sounds like it belongs on the platform you're posting it to.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="M16 9.5 22 6v12l-6-3.5"/></svg>
+            </div>
+            <h3>Video editing & story craft</h3>
+            <p>I shape raw footage into a clear narrative with pacing that keeps viewers watching to the end, not just clicking away.</p>
+            <div class="tag-row">
+              <span class="tag">Premiere Pro</span>
+              <span class="tag">Narrative editing</span>
+              <span class="tag">Pacing</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--delay:80ms">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 17V9a2 2 0 0 1 2-2h5l2 2h5a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M9 13h6"/></svg>
+            </div>
+            <h3>Motion graphics & titles</h3>
+            <p>Custom titles, lower thirds and animated graphics that make a video feel finished, not just cut together.</p>
+            <div class="tag-row">
+              <span class="tag">After Effects</span>
+              <span class="tag">Kinetic type</span>
+              <span class="tag">Templates</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--delay:160ms">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg>
+            </div>
+            <h3>Color grading</h3>
+            <p>Consistent, intentional color that matches your brand and makes every shot feel like it belongs together.</p>
+            <div class="tag-row">
+              <span class="tag">DaVinci Resolve</span>
+              <span class="tag">LUTs</span>
+              <span class="tag">Color matching</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--delay:240ms">
+            <div class="service-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14h3l4 4V6l-4 4H4v4Z"/><path d="M17 8a5 5 0 0 1 0 8"/></svg>
+            </div>
+            <h3>Sound design & mixing</h3>
+            <p>Clean dialogue, balanced music and sound effects that make a video feel professional, even with your eyes closed.</p>
+            <div class="tag-row">
+              <span class="tag">Audition</span>
+              <span class="tag">Mixing</span>
+              <span class="tag">SFX</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TOOLS MARQUEE ===================== -->
+    <section class="tools-section reveal">
+      <div class="container">
+        <p class="tools-label">Tools I use every day</p>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>Premiere Pro</span><span>After Effects</span><span>DaVinci Resolve</span>
+          <span>Photoshop</span><span>Audition</span><span>Media Encoder</span>
+          <span>Frame.io</span><span>Notion</span>
+          <span>Premiere Pro</span><span>After Effects</span><span>DaVinci Resolve</span>
+          <span>Photoshop</span><span>Audition</span><span>Media Encoder</span>
+          <span>Frame.io</span><span>Notion</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED WORK ===================== -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">00:02</span>
+          <h2 class="section-title">Featured work</h2>
+          <p class="section-sub">A showreel up top, and a few full projects below. Every video plays right here, hosted on YouTube.</p>
+        </div>
+
+        <!-- Showreel: the big featured video. Edit the ID in js/videos-data.js -->
+        <div class="showreel reveal">
+          <div class="video-frame" data-video-id="iXkWAEDgq1E" data-video-title="Showreel 2026">
+            <img class="video-thumb" alt="" loading="lazy" />
+            <button class="play-btn" aria-label="Play showreel">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg>
+            </button>
+          </div>
+          <div class="showreel-caption">
+            <span>Showreel — 2026</span>
+            <span>A two-minute cut of my favorite work from the last year.</span>
+          </div>
+        </div>
+
+        <!-- Project grid: built automatically from js/videos-data.js -->
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <img src="images/profile.jpg" alt="Portrait of Your Name" id="profilePhoto" />
+          <div class="about-photo-fallback" id="profileFallback" hidden>
+       
+            <span></span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal" style="--delay:100ms">
+          <span class="section-index">00:03</span>
+          <h2 class="section-title">About me</h2>
+          <p>
+            Hi, I'm Your Name. I'm a video editor and motion designer with a background
+            in <em>[your background or niche]</em>. I care about pacing, story and making
+            sure every cut earns its place in the timeline.
+          </p>
+          <p>
+            Whether it's a branded campaign, a weekly YouTube series or a wedding film,
+            the job is the same: keep people watching until the very end.
+          </p>
+
+          <ul class="about-list">
+            <li>Fast turnaround, without cutting corners</li>
+            <li>Clear communication from brief to final export</li>
+            <li>Story-first editing, not just trimming clips</li>
+            <li>Platform-ready exports for YouTube, Instagram and TikTok</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">Let's work together</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-inner reveal">
+        <span class="section-index">00:04</span>
+        <h2 class="section-title">Have a project in mind?</h2>
+        <p class="section-sub">
+          I'm currently open for freelance and collaboration work.
+          The fastest way to reach me is by email.
+        </p>
+
+        <a href="mailto:your.email@example.com" class="btn btn-primary btn-large">Send an email</a>
+
+        <div class="contact-socials">
+          <a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/finxprop/?utm_source=chatgpt.com" target="_blank" rel="noopener">X</a>
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <a href="#top" class="logo">Your Name<span class="logo-dot">.</span></a>
+      <nav class="footer-nav">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/videos-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

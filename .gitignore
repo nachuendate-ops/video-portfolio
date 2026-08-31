@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+
+# Vercel
+.vercel
+
+# Node (only relevant if you ever add tooling later)
+node_modules/
